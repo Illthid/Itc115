@@ -27,7 +27,7 @@ public class assignment3 {
         System.out.println("With Math class: \n");
         printPowersOfN(2, 7);
         printPowersOfN(5, 3);
-        printPowersOfN(10,3);
+        printPowersOfN(10,3); //Test batch
 
         System.out.println("\n-------------------");
 
@@ -35,7 +35,7 @@ public class assignment3 {
         System.out.println("\nWithout Math class: \n");
         printPowersOfN2(2, 7);
         printPowersOfN2(5, 3);
-        printPowersOfN2( 10,3);
+        printPowersOfN2( 10,3); //Test batch
     }
 
     public static void printPowersOfN(int base, int exp) {
