@@ -1,0 +1,36 @@
+public class Main {
+    //*******************************************************************
+
+    // Write a method called 'repl' that accepts a String and a number of
+    // repetitions as parameters and returns the String concatenated that
+    // many times.
+
+    // For example, the call repl("hello", 3) should return "hellohellohello".
+    // If the number of repetitions is zero or less, the method should
+    // return an empty string.
+    // By: David Barnette
+    //Date: 01/29/2020
+    //*******************************************************************
+
+
+    public static void main(String[] args) {
+        System.out.println("This Program accepts a String and a number of repetitions, and returns them. Example");
+        System.out.println("Example Hello, 3  would return hellohellohello");
+        System.out.println(repl("hello", 0));//"hello" 0 times
+        System.out.println(repl("hello", 1));//"hello" 1 times
+        System.out.println(repl("hello", 2));//"hello" 2 times
+        System.out.println(repl("hello", 3));//"hello" 3 times
+        System.out.println(repl("Hello World ",5));//"Hello World" 5 times
+    }
+
+    public static String repl(String str, int reps) {
+        String output = "";
+        if (reps > 0) { // If reps 1 or more, return str concatenated reps times
+            output = str;
+            for (int i=1; i < reps; i++) {
+                output += str;
+            }
+        }
+        return output;	// If reps less than 1, Return empty string
+    }
+}
