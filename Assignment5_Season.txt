@@ -12,7 +12,6 @@ between 6/16 and 9/15, you should return "Summer". And if the date falls between
  */
 //David Barnette
 //"2/4/2020"
-
 import java.util.Scanner;
 
 public class Main {
@@ -20,27 +19,31 @@ public class Main {
     public static void main(String[] args) {
         int month, day;
         Scanner console = new Scanner(System.in);
-
+        System.out.println("Enter month and days in numerical value, Example: 1/31(january 31st) or" +
+                " 4/28(april 28th) or 12/15(december 15th)");
         System.out.print("Enter Month: ");
         month = console.nextInt();
 
         System.out.print("Enter Day: ");
         day = console.nextInt();
 
-        System.out.print(season(month, day));
+        System.out.println("You entered "+ month +"/"+ day +" and ");
+        System.out.println(season(month,day));
     }
 
     public static String season(int month, int day) {
-        int days = (month - 1) * 31 + day;
-        if (days >= 78 && days <= 170) {
-            return "spring";
-        } else if (days >= 171 && days <= 263) {
-            return "summer";
-        } else if (days >= 264 && days <= 356) {
-            return "fall";
-        } else {
-            return "winter";
+        int d=day;
+        int m=month;
+        if((month < 1) || (month > 12) || (day < 1) || (day > 31)) {
+            return "Invalid Parameters";
+        }else if((m==12)&&(d>=16)||(m==1)||(m==2)||(m==3)&&(d<=15)){
+            return "It is Winter";
+        }else if((m==3)&&(d>=16)||(m==4)||(m==5)||(m==6)&&(d<=15)) {
+            return "It is Spring";
+        }else if((m==6)&&(d>=16)||(m==7)||(m==8)||(m==9)&&(d<=15)) {
+            return "It is Summer";
+        }else{
+            return "It is Fall";
         }
-
     }
 }
