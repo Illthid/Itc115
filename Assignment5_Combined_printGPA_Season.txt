@@ -1,4 +1,4 @@
-package com.company;
+
 import java.util.Scanner;
 /*
  * Write a method called printGPA that accepts a Scanner for the console
@@ -17,7 +17,9 @@ Maria's grade is 82.8 because her average of (72 + 91 + 84 + 89 +78) / 5 equals 
 public class Main {
 
     public static void main(String[] args) {
-        printGPA();
+        printGPA();//This is printGPA main
+        
+        //Below this is Season Main
         int month, day;
         Scanner console = new Scanner(System.in);
         System.out.println("Enter month and days in numerical value, Example: 1/31(january 31st) or" +
@@ -30,6 +32,7 @@ public class Main {
 
         System.out.println("You entered "+ month +"/"+ day +" and ");
         System.out.println(season(month,day));
+        //Above is Season Main
     }
 
     public static void printGPA() {
