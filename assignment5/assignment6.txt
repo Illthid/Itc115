@@ -1,0 +1,116 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    //*******************************************************************
+    // Write a method called boyGirl that accepts a Scanner that is reading
+    // its input from a file containing a series of names followed by
+    // integer. The names alternate between boys' names and girls' names.
+    // Your method should compute the absolute difference between the sum of
+    // the boys' integers and the sum of the girls' integers. The input
+    // could end with either a boy or girl; you may not assume that it
+    // contains an even number of names. For example, if the input file
+    // contains the following text:
+
+    // Erik 3 Rita 7 Tanner 14 Jillyn 13 Curtis 4 Stephanie 12 Ben 6
+
+    // Then the method should produce the following console output, since
+    // the boys' sum is 27 and the girls' sum is 32:
+
+    // 4 boys, 3 girls
+    // Difference between boys' and girls' sums: 5
+    //David Barnette
+    //2/10/2020
+    //*******************************************************************
+
+    public static void main(String[] args) throws FileNotFoundException {
+
+        //scanner to read file boysgirls.txt
+        Scanner input = new Scanner(new File("boysgirls.txt"));
+
+        PrintStream ps = new PrintStream(System.out);
+
+        // string print:
+
+        ps.print("The total number of");
+        // function call
+        boyGirl(input);
+        // stream flush
+        ps.flush();
+
+
+    }
+
+    public static void boyGirl(Scanner input) throws FileNotFoundException {
+        Console cnsl = null;
+        PrintWriter out = null;
+        String test = "";
+
+
+        int boyTotalGirlTotal;
+
+        int boy = 0;
+        int boyTotal = 0;
+
+
+        int girl = 0;
+        int girlTotal = 0;
+
+        int iterator = 0;
+        String x = "";
+        // while loop to iterate every result read from the file using scanner
+        while (input.hasNext()) {
+
+            String y = input.next();
+
+            if (iterator % 2 == 0 || iterator == -1) {
+
+                boy++;
+
+                boyTotal +=
+                        input.nextInt();
+            } else {
+                girl++;
+                girlTotal +=
+                        input.nextInt();
+            }
+            iterator++;
+
+        }
+
+        boyTotalGirlTotal = boyTotal - girlTotal;
+
+        // reads from method
+        System.out.println(" boys is: " + boy + " and " + "girls is: " + girl);
+
+        System.out.println("The boys total  = " + boyTotal + " and the girls total  = " + girlTotal);
+
+        System.out.println("The outstanding number is " + Math.abs(boyTotalGirlTotal));
+
+        try {
+            // creates a console object
+            cnsl = System.console();
+
+            // if console is not null
+            if (cnsl != null) {
+
+                // creates new print writer
+                out = cnsl.writer();
+
+                // prints
+                System.out.println(boy);
+                System.out.println(girl);
+                System.out.println(boyTotal);
+                System.out.println(girlTotal);
+                System.out.println(boyTotalGirlTotal);
+            }
+
+        } catch (Exception ex) {
+            // if any error occurs
+            ex.printStackTrace();
+        }
+
+
+    }
+}
+
