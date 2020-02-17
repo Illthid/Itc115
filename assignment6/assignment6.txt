@@ -25,17 +25,13 @@ public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        //scanner to read file boysgirls.txt
         Scanner input = new Scanner(new File("boysgirls.txt"));
 
         PrintStream ps = new PrintStream(System.out);
 
-        // string print:
 
         ps.print("The total number of");
-        // function call
         boyGirl(input);
-        // stream flush
         ps.flush();
 
 
@@ -58,7 +54,6 @@ public class Main {
 
         int iterator = 0;
         String x = "";
-        // while loop to iterate every result read from the file using scanner
         while (input.hasNext()) {
 
             String y = input.next();
@@ -80,7 +75,6 @@ public class Main {
 
         boyTotalGirlTotal = boyTotal - girlTotal;
 
-        // reads from method
         System.out.println(" boys is: " + boy + " and " + "girls is: " + girl);
 
         System.out.println("The boys total  = " + boyTotal + " and the girls total  = " + girlTotal);
@@ -88,16 +82,12 @@ public class Main {
         System.out.println("The outstanding number is " + Math.abs(boyTotalGirlTotal));
 
         try {
-            // creates a console object
             cnsl = System.console();
 
-            // if console is not null
             if (cnsl != null) {
 
-                // creates new print writer
                 out = cnsl.writer();
 
-                // prints
                 System.out.println(boy);
                 System.out.println(girl);
                 System.out.println(boyTotal);
@@ -106,7 +96,6 @@ public class Main {
             }
 
         } catch (Exception ex) {
-            // if any error occurs
             ex.printStackTrace();
         }
 
