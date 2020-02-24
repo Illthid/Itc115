@@ -1,4 +1,9 @@
-
+/* Write a static method isPowerOfTwo that takes an integer n as an argument, and that returns true if n is a power of two, and otherwise false. If n is zero or negative, return false.
+Note that isPowerOfTwo(1) should always return true, since 2^0=1.
+David Barnette
+MidTerm Part2
+2/24/2020
+/*
 public class Main {
     public static void main(String[] args) {
 
