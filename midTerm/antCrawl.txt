@@ -1,4 +1,9 @@
 import java.util.*;
+//Write a program that simulates an ant trying to crawl up a building of height 6 steps. The ant starts on the ground, at //height 0. Each iteration, the ant either crawls up one step, or slips off and falls all the way to the ground.There is a //50% on each iteration that the ant will slip. The program should keep going until the ant gets to the top of the //building.It should then print out the number of falls that the ant took before it finally reached the top.
+//David Barnette
+//MidTerm Part1
+//2/24/2020
+
 public class Main {
 
     public static void main(String[] args) {
