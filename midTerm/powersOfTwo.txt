@@ -4,25 +4,27 @@ David Barnette
 MidTerm Part2
 2/24/2020
 /*
+package com.company;
+
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println(isPowerOfTwo(5));
-        System.out.println(isPowerOfTwo(8));
+        System.out.println(isPowerOfTwo(1));
+        System.out.println(isPowerOfTwo(0));
 
     }
 
-    public static boolean isPowerOfTwo(int n) {
-        if (n <= 0) {
+    public static boolean isPowerOfTwo(int z) {
+        if (z <= 0) {
             return false;
         }
         int x = (int)Math.pow(2, 0);
         int i = 0;
-        while (x < n) {
+        while (x < z) {
             x = (int)Math.pow(2, i);
             i++;
         }
-        return x == n;
+        return x == z;
     }
 
 }
