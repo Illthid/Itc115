@@ -1,0 +1,26 @@
+import java.util.*;
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+        antCrawl();
+    }
+    public static void antCrawl(){
+        int height=0;
+        int steps=0;
+        Random rand=new Random();
+
+        while(height!=6){
+            double x=(int)rand.nextInt(100);
+            steps++;
+            System.out.println("one more step");
+            if(x<=50){
+                height=0;
+            }else if(x>=51){
+                height++;
+            }
+        }if(height==6){
+            System.out.println("Ant succeeded in: "+steps+ " steps");
+        }
+    }
+ 
