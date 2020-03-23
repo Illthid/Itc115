@@ -7,11 +7,11 @@ package com.company;
         private String author;
 
         public CD(int itemNumber, String title, boolean reserved, boolean checkedIn, int daysLate,
-                  double finesAccrued, double runTime, String genre, String creator) {
+                  double finesAccrued, double runTime, String genre, String author) {
             super(itemNumber, title, reserved, checkedIn, daysLate, finesAccrued);
             this.runTime = runTime;
             this.genre = genre;
-            this.author = creator;
+            this.author = author;
         }
 
 
